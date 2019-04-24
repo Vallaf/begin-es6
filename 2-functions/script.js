@@ -1,13 +1,13 @@
-//2.1 Fonctions simples
-const sayHello = function() {
+//2.1 Fonctions simples : remplacement par fonction fléchée => ok
+const sayHello = () => {
     console.log('Hello')
 }
 
-const sayMyName = function(first, last) {
+const sayMyName = (first, last) => {
     console.log(first, last)
 }
 
-const sayMyAge = function(age) {
+const sayMyAge = (age) => {
     console.log('You are ' + age + ' years old')
 }
 
@@ -22,9 +22,20 @@ const object = {
     color: 'red',
     shape: 'circle',
     threeDimensions: false,
+    
     showThis: function() {
-        console.log(this)
+    console.log(this)
+    } 
+   
+
+    
+   
+    /* showThis: () => {
+    console.log(this)
     }
+    affiche dans la console Window . Les fonctions fléchées ne sont pas totalement identiques aux fonctions classiques.
+    Elles ne gèrent pas les valeurs this, arguments et super.
+    */
 }
 
 object.showThis()
@@ -38,11 +49,11 @@ const odile = {
         last: 'Crok'
     },
     age: 23,
-    //sayHello: ...
-    //sayMyName:...
-    //sayMyAge:...
+   sayHello: () => console.log('Hello'),
+   sayMyName: () => console.log(odile.name.first,odile.name.last),
+   sayMyAge: () => console.log('You are ' + odile.age + ' years old')
 }
 
-//odile.sayHello()
-//odile.sayMyName()
-//odile.sayMyAge()
+odile.sayHello()
+odile.sayMyName()
+odile.sayMyAge()
