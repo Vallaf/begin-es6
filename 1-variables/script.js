@@ -1,8 +1,8 @@
 //1.1 Types simples
 
-var name = 'Jacques'
-var age = 80
-var useless = 'something'
+let name = 'Jacques'
+let age = 80
+let useless = 'something'
 
 console.log(name, age, useless)
 
@@ -27,7 +27,7 @@ console.log(fruits, vegetables)
 //----------------------//
 //1.2 Objets
 
-let settings = {
+const settings = {
     sound: true,
     music: false,
     graphics: 'high',
