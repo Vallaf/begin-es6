@@ -8,6 +8,15 @@
 2. Constatez que cela ne change rien. Désormais **on n'utilisera plus `var`** mais `let` ou `const`
 3. Remplacez toutes les occurences de `let` par `const`.
 4. Expliquez l'erreur
+
+TypeError: Assignment to constant variable.
+Une constante est une valeur qui ne peut pas être modifiée lors de l'exécution du programme. Elle ne peut pas être modifiée grâce à une réaffectation ou grâce à une redéclaration.
+Il existe plusieurs façons de résoudre ce problème et il faut au préalable comprendre le rôle de la constante en question.
+const ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à let 
+La déclaration const crée une référence en lecture seule vers une valeur. Elle ne signifie pas que la valeur en question est immuable mais uniquement que l'identifiant de la référence ne peut pas recevoir de nouvelle valeur.
+Ainsi, si le contenu est un objet, celui-ci pourra toujours être modifié.
+En revanche, on peut modifier les propriétés.
+
 5. Corrigez le code en conservant le maximum de valeurs constantes
 
 ### Section 2
