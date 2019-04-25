@@ -14,7 +14,7 @@ console.log(age)
 console.log(data)
 
 for (let property in data) {
-    console.log(data[property]);
+   
     const {dateDebut, dateFin, texte} = data[property]
     console.log(dateDebut, dateFin, texte);
 }
